@@ -19,7 +19,7 @@ export default function WelcomeScreen() {
         setTimeout(()=> ring1padding.value = withSpring(ring1padding.value+hp('5')), 100);
         setTimeout(()=> ring2padding.value = withSpring(ring2padding.value+hp('5.5')), 300);
 
-        // setTimeout(()=> navigation.navigate('Home'), 2500)
+        setTimeout(()=> navigation.navigate('Home'), 2500)
     },[])
   return (
     <View style={tw`flex-1 justify-center items-center bg-amber-500`}>
