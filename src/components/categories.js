@@ -12,20 +12,21 @@ export default function Categories({categories, activeCategory, handleChangeCate
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        className=""
+        className={tw``}
         contentContainerStyle={{paddingHorizontal: 15}}
       >
         {
             categories.map((cat, index)=>{
                 let isActive = cat.strCategory==activeCategory;
-                let activeButtonClass = isActive? ' bg-amber-400': ' bg-black/10';
+                let activeButtonClass = isActive? 'bg-amber-400': 'bg-black';
                 return (
                     <TouchableOpacity
                         key={index}
                         onPress={()=> handleChangeCategory(cat.strCategory)}
                         className={tw`flex items-center`}
+                        style={{ marginRight: 20 }}
                     >
-                        <View className={tw`rounded-full p-[6px]  ${activeButtonClass}`}>
+                        <View className={tw`rounded-full p-[6px]  ${activeButtonClass}`} style={{borderRadius: 5}}>
                             {/* <Image
                                 source={{uri: cat.strCategoryThumb}}
                                 style={{width: hp(6), height: hp(6)}}
@@ -37,7 +38,7 @@ export default function Categories({categories, activeCategory, handleChangeCate
                                 className={tw`rounded-full`}
                             />
                         </View>
-                        <Text className={`text-neutral-600`} style={{fontSize: hp('1.6')}}>
+                        <Text className={tw`text-neutral-600`} style={{fontSize: hp(1.6)}}>
                             {cat.strCategory}
                         </Text>
                     </TouchableOpacity>
