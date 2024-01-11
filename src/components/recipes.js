@@ -13,8 +13,8 @@ import tw from 'twrnc';
 export default function Recipes({categories, meals}) {
     const navigation = useNavigation();
   return (
-    <View className={tw`mx-4 my-3`}>
-      <Text style={{fontSize: hp(4)}} className={tw`font-semibold text-neutral-600`}>Recipes</Text>
+    <View className={tw`mx-4 my-3`} style={{marginLeft: 2, marginRight: 2, marginTop: hp(2)}}>
+      <Text style={{fontSize: hp(3), marginBottom: hp(1)}} className={tw`font-semibold text-neutral-600`}>Recipes</Text>
       <View>
         {
             categories.length==0 || meals.length==0?(
@@ -26,8 +26,6 @@ export default function Recipes({categories, meals}) {
                     numColumns={2}
                     showsVerticalScrollIndicator={false}
                     renderItem={({item, i}) => <RecipeCard item={item} index={i} navigation={navigation} />}
-                    // refreshing={isLoadingNext}
-                    // onRefresh={() => refetch({first: ITEM_CNT})}
                     onEndReachedThreshold={0.1}
                     // onEndReached={() => loadNext(ITEM_CNT)}
                 />
@@ -59,7 +57,7 @@ const RecipeCard = ({item, index, navigation})=>{
                     className={tw`bg-black/5`}
                 />
                 
-                <Text style={{fontSize: hp(2)}} className={tw`font-semibold ml-2 text-neutral-600`}>
+                <Text style={{fontSize: hp(1.6)}} className={tw`font-semibold ml-2 text-neutral-600`}>
                     {
                         item.strMeal.length>20? item.strMeal.slice(0,20)+'...': item.strMeal
                     }

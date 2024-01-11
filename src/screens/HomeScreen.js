@@ -64,7 +64,7 @@ export default function HomeScreen() {
         </View>
 
         {/* greetings and punchline */}
-        <View className={tw`mx-4 mb-2`} style={{marginLeft: 6}}>
+        <View className={tw`mx-4 mb-2`} style={{marginLeft: 5}}>
           <Text style={{fontSize: hp(1.7), color: "rgb(82 82 82)"}} className={tw`text-neutral-600`}>Hello, Harshul!</Text>
           <View>
             <Text style={{fontSize: hp(3.8), color: "rgb(82 82 82)"}} className={tw`font-semibold text-neutral-600`}>Make your own food,</Text>
@@ -75,7 +75,7 @@ export default function HomeScreen() {
         </View>
 
         {/* search bar */}
-        <View className={tw`mx-4 flex-row items-center rounded-full bg-black/5 p-[6px]`} style={{ marginLeft: 5, flex: 1, flexDirection: "row", marginTop: 3, marginBottom: 4 }}>
+        <View className={tw`mx-4 flex-row items-center rounded-full bg-black/5 p-[6px]`} style={{ marginLeft: 5, flex: 1, flexDirection: "row", marginTop: 3}}>
   <View className={tw`bg-white rounded-full p-3`}>
     <MagnifyingGlassIcon size={hp(2.5)} strokeWidth={3} color="gray" />
   </View>
@@ -88,7 +88,7 @@ export default function HomeScreen() {
 </View>
 
         {/* categories */}
-        <View style={{marginTop: 4}}>
+        <View>
           { categories.length>0 && <Categories categories={categories} activeCategory={activeCategory} handleChangeCategory={handleChangeCategory} /> }
         </View>
 
